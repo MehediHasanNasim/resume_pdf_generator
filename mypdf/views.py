@@ -14,7 +14,7 @@ def take(request):
         previous_work = request.POST.get("previous_work", "")
         skills = request.POST.get("skills", "")
         
-        profile = Profile(name=name, email=email, phone=phone, summary=summary, graduation=graduation, university=university, previous_work=previous_work)
+        profile = Profile(name=name, email=email, phone=phone, summary=summary, graduation=graduation, university=university, school=school, previous_work=previous_work, skills=skills)
         profile.save()
         
     return render(request, 'pdf/take.html')
