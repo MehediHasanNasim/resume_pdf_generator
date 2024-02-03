@@ -19,3 +19,5 @@ def take(request):
         
     return render(request, 'pdf/take.html')
 
+def resume(request):
+    return render(request, 'pdf/resume.html')
