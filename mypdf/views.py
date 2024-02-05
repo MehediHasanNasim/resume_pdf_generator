@@ -19,5 +19,6 @@ def take(request):
         
     return render(request, 'pdf/take.html')
 
-def resume(request):
-    return render(request, 'pdf/resume.html')
+def resume(request, id):
+    user_profile = Profile.objects.get(pk=id)
+    return render(request, 'pdf/resume.html', {'user_profile':user_profile})

@@ -22,4 +22,6 @@ from mypdf import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.take, name='take'),
+    path('<int:id>/', views.resume, name='resume'),
+
 ]
